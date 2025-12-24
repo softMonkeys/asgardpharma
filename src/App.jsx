@@ -17,9 +17,27 @@ function App() {
         title="THE MISSION"
         subtitle="To produce affordable pharmaceuticals by licensing global innovations and utilizing Canadian biomanufacturing infrastructure."
       >
-        <p className="max-w-3xl">
-          Asgard Pharma is a <strong>Fabless Biologics & Vaccine Manufacturing</strong> company. We do not own the factories; instead, we leverage existing, underutilized infrastructure to produce high-quality pharmaceuticals. We bridge the gap between innovation and production, ensuring that life-saving treatments reach those who need them most.
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          {/* Card 1: Affordability */}
+          <div className="group p-8 bg-white border border-text-main/5 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <h3 className="text-3xl font-bold mb-6 text-text-main group-hover:text-accent transition-colors">
+              Affordability
+            </h3>
+            <p className="text-lg text-text-muted leading-relaxed">
+              We aim to challenge the dominance of US "Big Pharma" by reducing the burden of high cost vaccines & biologics on the Canadian taxpayer through leveraging domestic manufacturing capabilities.
+            </p>
+          </div>
+
+          {/* Card 2: Our Vision */}
+          <div className="group p-8 bg-text-main border border-text-main rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <h3 className="text-3xl font-bold mb-6 text-bg-main">
+              Our Vision
+            </h3>
+            <p className="text-lg text-bg-main/80 leading-relaxed">
+              Become Canada's first agile, cost-efficient bridge for licensing, developing, and commercializing innovative foreign intellectual property in large molecule pharmaceuticals.
+            </p>
+          </div>
+        </div>
       </VastSection>
 
       {/* Problem - Split Screen (Text Left, Image Right) */}
