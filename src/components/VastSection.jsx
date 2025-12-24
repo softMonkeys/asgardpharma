@@ -10,25 +10,32 @@ const VastSection = ({
     mediaContent,
     align = 'left', // 'left' | 'right' | 'center'
     type = 'split', // 'split' | 'full'
+    variant = 'light', // 'light' | 'dark'
     className = ""
 }) => {
 
+    const isDark = variant === 'dark';
+    const bgClass = isDark ? 'bg-text-main' : 'bg-transparent';
+    const titleClass = isDark ? 'text-white' : 'text-text-main';
+    const subtitleClass = isDark ? 'text-white/80' : 'text-text-main/80';
+    const textMutedClass = isDark ? 'text-white/70' : 'text-text-muted';
+
     if (type === 'full') {
         return (
-            <section id={id} className={`py-32 px-8 relative overflow-hidden ${className}`}>
+            <section id={id} className={`py-32 px-8 relative overflow-hidden ${bgClass} ${className}`}>
                 <div className="container mx-auto relative z-10">
                     <div className="max-w-4xl">
                         {title && (
-                            <h2 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter text-text-main leading-[0.9]">
+                            <h2 className={`text-6xl md:text-8xl font-bold mb-8 tracking-tighter leading-[0.9] ${titleClass}`}>
                                 {title}
                             </h2>
                         )}
                         {subtitle && (
-                            <p className="text-xl md:text-2xl text-text-main/80 mb-12 max-w-2xl leading-relaxed">
+                            <p className={`text-xl md:text-2xl mb-12 max-w-2xl leading-relaxed ${subtitleClass}`}>
                                 {subtitle}
                             </p>
                         )}
-                        <div className="text-lg text-text-muted leading-relaxed">
+                        <div className={`text-lg leading-relaxed ${textMutedClass}`}>
                             {children}
                         </div>
                     </div>
@@ -38,18 +45,18 @@ const VastSection = ({
     }
 
     return (
-        <section id={id} className={`py-24 md:py-32 px-8 relative overflow-hidden ${className}`}>
+        <section id={id} className={`py-24 md:py-32 px-8 relative overflow-hidden ${bgClass} ${className}`}>
             <div className="container mx-auto">
                 <div className={`flex flex-col md:flex-row gap-16 items-center ${align === 'right' ? 'md:flex-row-reverse' : ''}`}>
 
                     {/* Text Content */}
                     <div className="flex-1">
                         {title && (
-                            <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tighter text-text-main">
+                            <h2 className={`text-4xl md:text-6xl font-bold mb-8 tracking-tighter ${titleClass}`}>
                                 {title}
                             </h2>
                         )}
-                        <div className="text-lg text-text-muted leading-relaxed space-y-6">
+                        <div className={`text-lg leading-relaxed space-y-6 ${textMutedClass}`}>
                             {children}
                         </div>
                     </div>

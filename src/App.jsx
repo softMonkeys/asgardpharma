@@ -14,7 +14,7 @@ function App() {
       <VastSection
         id="overview"
         type="full"
-        title="THE MISSION"
+        title="OUR MISSION"
         subtitle="To produce affordable pharmaceuticals by licensing global innovations and utilizing Canadian biomanufacturing infrastructure."
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
@@ -38,6 +38,46 @@ function App() {
             </p>
           </div>
         </div>
+      </VastSection>
+
+      {/* History - Moved Section */}
+      <VastSection
+        id="history"
+        title="History"
+        align="left"
+        variant="dark"
+        mediaContent={
+          <div className="grid grid-cols-2 gap-4">
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=2070&auto=format&fit=crop" alt="Vintage Lab" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
+            <img src="https://images.unsplash.com/photo-1565619624098-e659884d2c2b?q=80&w=2070&auto=format&fit=crop" alt="Factory" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
+            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=2070&auto=format&fit=crop" alt="Vials" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Building" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
+          </div>
+        }
+      >
+        <h3 className="text-xl font-bold mb-6 text-white">
+          Canada was <span className="text-accent">once a leader</span> in public vaccine manufacturing
+        </h3>
+        <ul className="space-y-6">
+          <li className="flex items-start gap-4">
+            <span className="text-accent text-xl mt-1">➤</span>
+            <p className="text-sm leading-relaxed text-white/80">
+              In 1914, Connaught Labs produced antitoxins as a <span className="font-bold text-white">public, not-for-profit institute</span> tied to the University of Toronto.
+            </p>
+          </li>
+          <li className="flex items-start gap-4">
+            <span className="text-accent text-xl mt-1">➤</span>
+            <p className="text-sm leading-relaxed text-white/80">
+              But by the 1990s, <span className="font-bold text-white">privatization and foreign acquisitions</span> (Connaught → Sanofi, Armand Frappier → GSK) dismantled our domestic capacity, leaving Canada <span className="font-bold text-white">exposed</span> during COVID 19.
+            </p>
+          </li>
+          <li className="flex items-start gap-4">
+            <span className="text-accent text-xl mt-1">➤</span>
+            <p className="text-sm leading-relaxed text-white/80">
+              In response, the federal government invested $126 million in the Biologics Manufacturing Centre (BMC) — which today <span className="font-bold text-white">remains underutilized</span>, with only one confirmed partner.
+            </p>
+          </li>
+        </ul>
       </VastSection>
 
       {/* Problem - Split Screen (Text Left, Image Right) */}
@@ -142,45 +182,7 @@ function App() {
         </section>
       </InteractiveBackground>
 
-      {/* History - Split Screen with Custom Grid */}
-      <VastSection
-        id="history"
-        title="HISTORY"
-        align="left"
-        className="bg-white"
-        mediaContent={
-          <div className="grid grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=2070&auto=format&fit=crop" alt="Vintage Lab" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
-            <img src="https://images.unsplash.com/photo-1565619624098-e659884d2c2b?q=80&w=2070&auto=format&fit=crop" alt="Factory" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
-            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=2070&auto=format&fit=crop" alt="Vials" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Building" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
-          </div>
-        }
-      >
-        <h3 className="text-xl font-bold mb-6 text-text-main">
-          Canada was <span className="text-accent">once a leader</span> in public vaccine manufacturing
-        </h3>
-        <ul className="space-y-6">
-          <li className="flex items-start gap-4">
-            <span className="text-accent text-xl mt-1">➤</span>
-            <p className="text-sm leading-relaxed">
-              In 1914, Connaught Labs produced antitoxins as a <span className="font-bold text-text-main">public, not-for-profit institute</span> tied to the University of Toronto.
-            </p>
-          </li>
-          <li className="flex items-start gap-4">
-            <span className="text-accent text-xl mt-1">➤</span>
-            <p className="text-sm leading-relaxed">
-              But by the 1990s, <span className="font-bold text-text-main">privatization and foreign acquisitions</span> (Connaught → Sanofi, Armand Frappier → GSK) dismantled our domestic capacity, leaving Canada <span className="font-bold text-text-main">exposed</span> during COVID 19.
-            </p>
-          </li>
-          <li className="flex items-start gap-4">
-            <span className="text-accent text-xl mt-1">➤</span>
-            <p className="text-sm leading-relaxed">
-              In response, the federal government invested $126 million in the Biologics Manufacturing Centre (BMC) — which today <span className="font-bold text-text-main">remains underutilized</span>, with only one confirmed partner.
-            </p>
-          </li>
-        </ul>
-      </VastSection>
+
 
       {/* Contact - Full Width Center */}
       <section id="contact" className="py-32 px-8 bg-bg-secondary relative overflow-hidden">
