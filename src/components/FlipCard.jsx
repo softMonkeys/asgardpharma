@@ -1,8 +1,8 @@
 import React from 'react';
 
-const FlipCard = ({ icon, title, description, backTitle, backDescription }) => {
+const FlipCard = ({ icon, title, description, backTitle, backDescription, className = "h-80" }) => {
     return (
-        <div className="group perspective-1000 w-full h-80 cursor-pointer flip-card-target">
+        <div className={`group perspective-1000 w-full cursor-pointer flip-card-target ${className}`}>
             <div className="relative w-full h-full transition-all duration-700 preserve-3d group-hover:rotate-y-180 shadow-lg rounded-xl">
 
                 {/* Front Side */}

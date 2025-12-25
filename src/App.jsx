@@ -88,26 +88,52 @@ function App() {
         align="left"
         className="bg-white"
       >
-        <p>
-          The global pharmaceutical industry faces a significant challenge: <strong>Accessibility</strong>. Life-saving biologics and vaccines are often too expensive or unavailable in many regions due to supply chain constraints and high manufacturing costs.
-        </p>
-        <p>
-          Traditional manufacturing requires massive capital investment (CAPEX), leading to higher drug prices and slower time-to-market for critical treatments. This bottleneck prevents innovation from scaling effectively.
-        </p>
-        <ul className="space-y-4 mt-8 border-t border-text-muted/20 pt-8">
-          <li className="flex items-center gap-4">
-            <span className="text-accent text-xl">â— </span>
-            <span className="text-text-main font-bold tracking-wider uppercase text-sm">High Capital Expenditure</span>
-          </li>
-          <li className="flex items-center gap-4">
-            <span className="text-accent text-xl">â— </span>
-            <span className="text-text-main font-bold tracking-wider uppercase text-sm">Complex Supply Chains</span>
-          </li>
-          <li className="flex items-center gap-4">
-            <span className="text-accent text-xl">â— </span>
-            <span className="text-text-main font-bold tracking-wider uppercase text-sm">Limited Capacity</span>
-          </li>
-        </ul>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <FlipCard
+            className="h-64"
+            icon={
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            }
+            title="Cost"
+            description="High out-of-pocket costs"
+            backDescription="Even with public and private coverage, patients still pay high out-of-pocket costs—while taxpayers foot inflated bills driven by pharma pricing power."
+          />
+          <FlipCard
+            className="h-64"
+            icon={
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            }
+            title="Fragile Health Sovereignty"
+            description="Reliance on foreign giants"
+            backDescription="Canada relies on foreign pharma giants, with little control over supply, pricing, or production."
+          />
+          <FlipCard
+            className="h-64"
+            icon={
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+            }
+            title="Vulnerable Supply Chains"
+            description="Exposed inability to produce"
+            backDescription="Pandemics and geopolitics have exposed our inability to produce critical medicines when it matters most."
+          />
+          <FlipCard
+            className="h-64"
+            icon={
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            }
+            title="Innovation Bottleneck"
+            description="Delayed therapies"
+            backDescription="Cutting-edge therapies abroad are delayed or unavailable in Canada due to lack of domestic licensing and trial pathways."
+          />
+        </div>
       </VastSection>
 
       {/* Solution - Split Screen (Image Left, Text Right) */}
