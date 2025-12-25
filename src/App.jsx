@@ -29,11 +29,11 @@ function App() {
           </div>
 
           {/* Card 2: Our Vision */}
-          <div className="group p-8 bg-text-main border border-text-main rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-            <h3 className="text-3xl font-bold mb-6 text-bg-main">
+          <div className="group p-8 bg-white border border-text-main/5 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <h3 className="text-3xl font-bold mb-6 text-text-main group-hover:text-accent transition-colors">
               Our Vision
             </h3>
-            <p className="text-lg text-bg-main/80 leading-relaxed">
+            <p className="text-lg text-text-muted leading-relaxed">
               Become Canada's first agile, cost-efficient bridge for licensing, developing, and commercializing innovative foreign intellectual property in large molecule pharmaceuticals.
             </p>
           </div>
