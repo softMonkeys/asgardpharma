@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const FlipCard = ({ icon, title, description, backTitle, backDescription, className = "h-80", peekOnScroll = false }) => {
+const FlipCard = ({ icon, title, description, backTitle, backDescription, className = "h-80", peekOnScroll = false, autoPeek = false, staggerDelay = 0 }) => {
     const [isPeeking, setIsPeeking] = useState(false);
     const cardRef = useRef(null);
     const hasPeeked = useRef(false);
 
+    // Initial Scroll Peek
     useEffect(() => {
         if (!peekOnScroll) return;
 
@@ -13,7 +14,7 @@ const FlipCard = ({ icon, title, description, backTitle, backDescription, classN
                 if (entry.isIntersecting && !hasPeeked.current) {
                     hasPeeked.current = true;
                     setIsPeeking(true);
-                    setTimeout(() => setIsPeeking(false), 1000); // Reset after 1s
+                    setTimeout(() => setIsPeeking(false), 1000);
                 }
             },
             { threshold: 0.5 }
@@ -25,6 +26,23 @@ const FlipCard = ({ icon, title, description, backTitle, backDescription, classN
 
         return () => observer.disconnect();
     }, [peekOnScroll]);
+
+    // Recurring Auto Peek
+    useEffect(() => {
+        if (!autoPeek) return;
+
+        const triggerPeek = () => {
+            setIsPeeking(true);
+            setTimeout(() => setIsPeeking(false), 1000);
+        };
+
+        // Start the interval
+        const intervalId = setInterval(() => {
+            setTimeout(triggerPeek, staggerDelay);
+        }, 15000);
+
+        return () => clearInterval(intervalId);
+    }, [autoPeek, staggerDelay]);
 
     return (
         <div ref={cardRef} className={`group perspective-1000 w-full cursor-pointer flip-card-target ${className}`}>

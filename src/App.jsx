@@ -92,6 +92,8 @@ function App() {
           <FlipCard
             className="h-64"
             peekOnScroll={true}
+            autoPeek={true}
+            staggerDelay={0}
             icon={
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -103,6 +105,8 @@ function App() {
           />
           <FlipCard
             className="h-64"
+            autoPeek={true}
+            staggerDelay={200}
             icon={
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -114,6 +118,8 @@ function App() {
           />
           <FlipCard
             className="h-64"
+            autoPeek={true}
+            staggerDelay={400}
             icon={
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
@@ -125,6 +131,8 @@ function App() {
           />
           <FlipCard
             className="h-64"
+            autoPeek={true}
+            staggerDelay={600}
             icon={
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -147,6 +155,8 @@ function App() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <FlipCard
             className="h-64"
+            autoPeek={true}
+            staggerDelay={0}
             icon={
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -158,6 +168,8 @@ function App() {
           />
           <FlipCard
             className="h-64"
+            autoPeek={true}
+            staggerDelay={200}
             icon={
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -169,6 +181,8 @@ function App() {
           />
           <FlipCard
             className="h-64"
+            autoPeek={true}
+            staggerDelay={400}
             icon={
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -180,6 +194,8 @@ function App() {
           />
           <FlipCard
             className="h-64"
+            autoPeek={true}
+            staggerDelay={600}
             icon={
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
@@ -192,44 +208,31 @@ function App() {
         </div>
       </VastSection>
 
-      {/* Competitive Advantages - Flip Cards */}
+      {/* Why Asgard - Static Cards */}
       <InteractiveBackground>
         <section className="py-32 px-8 bg-bg-secondary">
           <div className="container mx-auto">
-            <h2 className="text-5xl md:text-7xl font-bold text-text-main tracking-tighter mb-16 text-center">
+            <h2 className="text-5xl md:text-7xl font-bold text-text-main tracking-tighter mb-8 text-center">
               WHY ASGARD
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <FlipCard
-                icon={
-                  <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                }
-                title="Agility"
-                description="Rapid deployment without facility ownership"
-                backDescription="We can pivot quickly to manufacture new biologics and vaccines without the burden of maintaining expensive infrastructure. Our fabless model allows us to respond to market needs in weeks, not years."
-              />
-              <FlipCard
-                icon={
-                  <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                }
-                title="Cost-Efficiency"
-                description="Reduced overhead passed to patients"
-                backDescription="By eliminating capital expenditure on facilities, we reduce production costs by up to 40%. These savings translate directly into more affordable pharmaceuticals for patients and healthcare systems."
-              />
-              <FlipCard
-                icon={
-                  <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                }
-                title="Global Reach"
-                description="International innovation, local solutions"
-                backDescription="We license cutting-edge biologics from around the world and manufacture them locally using Canadian infrastructure. This ensures global quality standards while supporting domestic capacity."
-              />
+            <p className="text-xl text-center text-text-muted max-w-4xl mx-auto mb-16 leading-relaxed">
+              If drug development is supported by taxpayer dollars, then the public deserves access to its rewards—not just private shareholders.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {/* Card 1 */}
+              <div className="group p-10 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center h-full flex flex-col justify-center items-center">
+                <p className="text-xl md:text-2xl font-medium text-text-main leading-relaxed">
+                  We believe that public funding should yield <span className="font-bold text-accent">public returns</span>.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="group p-10 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center h-full flex flex-col justify-center items-center">
+                <p className="text-xl md:text-2xl font-medium text-text-main leading-relaxed">
+                  We believe in a <span className="font-bold text-accent">resilient, self-sufficient</span> Canadian pharmaceutical system, free of foreign interference, ready for pandemics and supply chain shocks.
+                </p>
+              </div>
             </div>
           </div>
         </section>
