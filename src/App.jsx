@@ -5,12 +5,12 @@ import VastSection from './components/VastSection';
 import FlipCard from './components/FlipCard';
 import InteractiveBackground from './components/InteractiveBackground';
 
-import SEO from './components/SEO';
+
 
 function App() {
   return (
     <Layout>
-      <SEO />
+
       <Hero />
 
       {/* Overview - Full Width Text Style */}
