@@ -48,32 +48,32 @@ function App() {
         variant="dark"
         mediaContent={
           <div className="grid grid-cols-2 gap-4">
-            <img src="/assets/images/history-connaught-vials.png" alt="Connaught Vials" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
-            <img src="/assets/images/history-scientist.png" alt="Scientist" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
-            <img src="/assets/images/history-map.png" alt="Historic Map" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
-            <img src="/assets/images/history-building.png" alt="Connaught Building" className="w-full h-48 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
+            <img src="/assets/images/history-connaught-vials.png" alt="Connaught Vials" className="w-full h-auto object-contain rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
+            <img src="/assets/images/history-scientist.png" alt="Scientist" className="w-full h-auto object-contain rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
+            <img src="/assets/images/history-map.png" alt="Historic Map" className="w-full h-auto object-contain rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
+            <img src="/assets/images/history-building.png" alt="Connaught Building" className="w-full h-auto object-contain rounded-sm grayscale hover:grayscale-0 transition-all duration-500" />
           </div>
         }
       >
-        <h3 className="text-xl font-bold mb-6 text-white">
+        <h3 className="text-2xl font-bold mb-6 text-white">
           Canada was <span className="text-accent">once a leader</span> in public vaccine manufacturing
         </h3>
         <ul className="space-y-6">
           <li className="flex items-start gap-4">
             <span className="text-accent text-xl mt-1">➤</span>
-            <p className="text-sm leading-relaxed text-white/80">
+            <p className="text-lg leading-relaxed text-white/90">
               In 1914, Connaught Labs produced antitoxins as a <span className="font-bold text-white">public, not-for-profit institute</span> tied to the University of Toronto.
             </p>
           </li>
           <li className="flex items-start gap-4">
             <span className="text-accent text-xl mt-1">➤</span>
-            <p className="text-sm leading-relaxed text-white/80">
+            <p className="text-lg leading-relaxed text-white/90">
               But by the 1990s, <span className="font-bold text-white">privatization and foreign acquisitions</span> (Connaught → Sanofi, Armand Frappier → GSK) dismantled our domestic capacity, leaving Canada <span className="font-bold text-white">exposed</span> during COVID 19.
             </p>
           </li>
           <li className="flex items-start gap-4">
             <span className="text-accent text-xl mt-1">➤</span>
-            <p className="text-sm leading-relaxed text-white/80">
+            <p className="text-lg leading-relaxed text-white/90">
               In response, the federal government invested $126 million in the Biologics Manufacturing Centre (BMC) — which today <span className="font-bold text-white">remains underutilized</span>, with only one confirmed partner.
             </p>
           </li>
