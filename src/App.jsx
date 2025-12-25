@@ -91,6 +91,7 @@ function App() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <FlipCard
             className="h-64"
+            peekOnScroll={true}
             icon={
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -143,25 +144,51 @@ function App() {
         image="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=2070&auto=format&fit=crop"
         align="right"
       >
-        <p>
-          Asgard Pharma operates on a <strong>Fabless Model</strong>. By decoupling manufacturing from product ownership, we eliminate the need for massive facility investments.
-        </p>
-        <p>
-          We partner with existing Canadian biomanufacturing facilities that have excess capacity. This allows us to:
-        </p>
-        <div className="grid grid-cols-1 gap-8 mt-8">
-          <div>
-            <h4 className="text-text-main font-bold uppercase tracking-widest mb-2">Agility</h4>
-            <p className="text-sm">Rapid deployment of manufacturing processes without the burden of facility maintenance.</p>
-          </div>
-          <div>
-            <h4 className="text-text-main font-bold uppercase tracking-widest mb-2">Cost-Efficiency</h4>
-            <p className="text-sm">Significantly reduced overhead costs passed down to patients and healthcare systems.</p>
-          </div>
-          <div>
-            <h4 className="text-text-main font-bold uppercase tracking-widest mb-2">Global Reach</h4>
-            <p className="text-sm">Leveraging international innovation to solve local health challenges.</p>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <FlipCard
+            className="h-64"
+            icon={
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            }
+            title="Rebuild Domestic Biotech"
+            description="Resilient domestic pipeline"
+            backDescription="License late-phase global innovations and invest in Canadian-led development and commercialization, building a resilient domestic pipeline."
+          />
+          <FlipCard
+            className="h-64"
+            icon={
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            }
+            title="Deploy Idle Capacity"
+            description="Untapped national capacity"
+            backDescription="Facilities like the Biologics Manufacturing Centre (BMC) represent untapped national capacity."
+          />
+          <FlipCard
+            className="h-64"
+            icon={
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            }
+            title="Slash Costs"
+            description="Affordable biologics"
+            backDescription="Avoid traditional R&D overhead and global distribution markups to offer affordable, locally made biologics for both patients and healthcare systems."
+          />
+          <FlipCard
+            className="h-64"
+            icon={
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+              </svg>
+            }
+            title="Eliminate Price Gouging"
+            description="Minimize excessive markups"
+            backDescription="Minimizing cost allows minimizing excessive markups to patients while still offering high-quality medicines."
+          />
         </div>
       </VastSection>
 

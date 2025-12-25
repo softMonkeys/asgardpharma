@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
-const FlipCard = ({ icon, title, description, backTitle, backDescription, className = "h-80" }) => {
+const FlipCard = ({ icon, title, description, backTitle, backDescription, className = "h-80", peekOnScroll = false }) => {
+    const [isPeeking, setIsPeeking] = useState(false);
+    const cardRef = useRef(null);
+    const hasPeeked = useRef(false);
+
+    useEffect(() => {
+        if (!peekOnScroll) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasPeeked.current) {
+                    hasPeeked.current = true;
+                    setIsPeeking(true);
+                    setTimeout(() => setIsPeeking(false), 1000); // Reset after 1s
+                }
+            },
+            { threshold: 0.5 }
+        );
+
+        if (cardRef.current) {
+            observer.observe(cardRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, [peekOnScroll]);
+
     return (
-        <div className={`group perspective-1000 w-full cursor-pointer flip-card-target ${className}`}>
-            <div className="relative w-full h-full transition-all duration-700 preserve-3d group-hover:rotate-y-180 shadow-lg rounded-xl">
+        <div ref={cardRef} className={`group perspective-1000 w-full cursor-pointer flip-card-target ${className}`}>
+            <div className={`relative w-full h-full transition-all duration-700 preserve-3d shadow-lg rounded-xl group-hover:rotate-y-180 ${isPeeking ? 'rotate-y-30' : ''}`}>
 
                 {/* Front Side */}
                 <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-xl p-8 flex flex-col items-center justify-center text-center border border-black/5">
