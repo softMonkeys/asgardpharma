@@ -48,49 +48,25 @@ const Layout = ({ children }) => {
             {/* Footer */}
             <footer className="bg-bg-secondary border-t border-black/5 pt-20 pb-10">
                 <div className="container mx-auto px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-                        <div>
-                            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-text-main mb-6">Company</h4>
-                            <ul className="space-y-4">
-                                <li><a href="#" className="text-sm text-text-muted hover:text-text-main transition-colors">About Us</a></li>
-                                <li><a href="#" className="text-sm text-text-muted hover:text-text-main transition-colors">Careers</a></li>
-                                <li><a href="#" className="text-sm text-text-muted hover:text-text-main transition-colors">News</a></li>
-                            </ul>
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-20">
+                        {/* Copyright and Company Name - Left Side (Desktop) or Top (Mobile) if changed order, but keeping standard flow */}
+                        <div className="mb-12 md:mb-0">
+                            <h4 className="text-2xl font-bold tracking-[0.2em] text-text-main uppercase mb-4">
+                                Asgard Pharmaceuticals Inc.
+                            </h4>
+                            <p className="text-xs text-text-muted leading-relaxed">
+                                &copy; {new Date().getFullYear()} ASGARD PHARMA. All rights reserved.
+                            </p>
                         </div>
-                        <div>
-                            <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-text-main mb-6">Services</h4>
-                            <ul className="space-y-4">
-                                <li><a href="#" className="text-sm text-text-muted hover:text-text-main transition-colors">Biologics</a></li>
-                                <li><a href="#" className="text-sm text-text-muted hover:text-text-main transition-colors">Vaccines</a></li>
-                                <li><a href="#" className="text-sm text-text-muted hover:text-text-main transition-colors">Licensing</a></li>
-                            </ul>
-                        </div>
+
+                        {/* Connect Column - Right Side */}
                         <div>
                             <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-text-main mb-6">Connect</h4>
                             <ul className="space-y-4">
                                 <li><a href="#" className="text-sm text-text-muted hover:text-text-main transition-colors">LinkedIn</a></li>
                                 <li><a href="#" className="text-sm text-text-muted hover:text-text-main transition-colors">Twitter</a></li>
-                                <li><a href="#" className="text-sm text-text-muted hover:text-text-main transition-colors">Contact</a></li>
+                                <li><a href="mailto:info@asgardpharma.ca" className="text-sm text-text-muted hover:text-text-main transition-colors">Contact</a></li>
                             </ul>
-                        </div>
-                        <div>
-                            <a href="#" className="text-2xl font-bold tracking-[0.2em] text-text-main uppercase block mb-6">
-                                Asgard
-                            </a>
-                            <p className="text-xs text-text-muted leading-relaxed">
-                                Fabless Biologics & Vaccine Manufacturing.<br />
-                                Edmonton, Alberta, Canada.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-black/5">
-                        <p className="text-xs text-text-muted">
-                            &copy; {new Date().getFullYear()} Asgard Pharma. All rights reserved.
-                        </p>
-                        <div className="flex space-x-6 mt-4 md:mt-0">
-                            <a href="#" className="text-xs text-text-muted hover:text-text-main transition-colors">Privacy Policy</a>
-                            <a href="#" className="text-xs text-text-muted hover:text-text-main transition-colors">Terms of Service</a>
                         </div>
                     </div>
                 </div>

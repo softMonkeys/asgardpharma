@@ -24,9 +24,9 @@ const Hero = () => {
             <div className="absolute inset-0 z-20 flex items-end pb-32 px-8">
                 <div className="container mx-auto">
                     <div className="max-w-4xl">
-                        <h1 className="text-7xl md:text-9xl font-bold text-text-main tracking-tighter mb-6 leading-[0.9]">
-                            FABLESS <br />
-                            BIOLOGICS
+                        <h1 className="text-5xl md:text-7xl font-bold text-text-main tracking-tighter mb-6 leading-[0.9]">
+                            FABLESS BIOLOGICS & <br />
+                            VACCINE MANUFACTURING
                         </h1>
                         <div className="flex flex-col md:flex-row gap-8 items-start md:items-center mt-12">
                             <p className="text-xl text-text-main/80 max-w-xl leading-relaxed font-light tracking-wide">
